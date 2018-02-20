@@ -5,11 +5,10 @@ end
 defmodule Day7 do
 
   def solve() do
-    programs = 
-      "day7_input.txt"
-      |> File.stream!([:read, :utf8])
-      |> Enum.map(&to_program/1)
-      |> unleaf
+    "day7_input.txt"
+    |> File.stream!([:read, :utf8])
+    |> Enum.map(&to_program/1)
+    |> unleaf
   end
 
   def unleaf([%Program{name: name}]) do
